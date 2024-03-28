@@ -1,0 +1,35 @@
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Coverage directory used by tools like istanbul
+coverage
+.eslintcache
+
+# vitest
+tsconfig.vitest-temp.json
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+
+package-lock.json
+
+# OSX
+.DS_Store
+
+out/
+dist/
+release/app/dist
+release/build
+.erb/dll
+
+.idea
+npm-debug.log.*
+
+.nvmdrc
