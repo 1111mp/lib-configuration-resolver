@@ -1,6 +1,6 @@
 {
   "name": "lib-configuration-resolver",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Find and load configuration for your library 🌈",
   "keywords": [
     "lib-configuration-resolver",
