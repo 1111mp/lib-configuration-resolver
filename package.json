@@ -1,7 +1,7 @@
 {
   "name": "lib-configuration-resolver",
-  "version": "0.0.1",
-  "description": "Library configuration resolver 🌈",
+  "version": "0.0.0",
+  "description": "Find and load configuration for your library 🌈",
   "keywords": [
     "lib-configuration-resolver",
     "configuration-resolver",
@@ -34,8 +34,8 @@
     "test:coverage": "vitest run --coverage",
     "changeset": "changeset add",
     "version": "changeset version",
-    "version:snapshot": "changeset version --snapshot dev",
     "release": "changeset publish",
+    "version:snapshot": "changeset version --snapshot dev",
     "release:snapshot": "changeset publish --snapshot --no-git-tag --tag dev",
     "prepare": "husky install"
   },
