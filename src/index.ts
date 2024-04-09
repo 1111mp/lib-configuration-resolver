@@ -94,23 +94,19 @@ async function loadConfigFromFile<T extends Config>(
 
   const isESM = isFilePathESM(resolvedPath)
 
-  try {
-    const bundled = await bundleConfigFile(resolvedPath, isESM)
-    const userConfig = await loadConfigFromBundledFile<T>(resolvedPath, bundled.code, isESM)
+  const bundled = await bundleConfigFile(resolvedPath, isESM)
+  const userConfig = await loadConfigFromBundledFile<T>(resolvedPath, bundled.code, isESM)
 
-    const config = await (typeof userConfig === "function" ? userConfig(configEnv) : userConfig)
+  const config = await (typeof userConfig === "function" ? userConfig(configEnv) : userConfig)
 
-    if (!isObject(config)) {
-      throw new Error(`config must export or return an object.`)
-    }
+  if (!isObject(config)) {
+    throw new Error(`config must export or return an object.`)
+  }
 
-    return {
-      configFile: normalizePath(resolvedPath),
-      config,
-      dependencies: bundled.dependencies
-    }
-  } catch (err) {
-    throw err
+  return {
+    configFile: normalizePath(resolvedPath),
+    config,
+    dependencies: bundled.dependencies
   }
 }
 
